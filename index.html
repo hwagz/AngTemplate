@@ -4,16 +4,28 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+    <link rel="shortcut icon" href="images/favicon.ico" >
     <script src="js/angular.min.js"></script>
     <script src="js/angular-route.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/app.js"></script>
   </head>
+
   <body ng-app="angtemp">
-    <a href="#/">Main</a>
-    <a href="#url1">URL 1</a>
-    <a href="#url2">URL 2</a>
-    <a href="#url3">URL 3</a>
-    <div ng-view></div>
+
+    <ul>
+      <li><a href="#/">Main</a></li>
+      <li><a href="#url1">URL 1</a></li>
+      <li><a href="#url2">URL 2</a></li>
+      <li><a href="#url3">URL 3</a></li>
+    </ul>
+    <input type="text" name="name" ng-model="input">
+    <div class="container">
+      <div ng-view></div>
+    </div>
+
+
+
+
   </body>
 </html>
