@@ -1,5 +1,5 @@
 angular
-  .module('APPNAME',['ngRoute'])
+  .module('angtemp',['ngRoute'])
   .config(function($routeProvider){
     $routeProvider
     .when('/url1',{
@@ -19,8 +19,17 @@ angular
       controller: "mainCtrl"
     });
   })
-  .controller('APPNAMECtrl', ['$scope','$filter',function($scope, $filter) {
-
+  .controller('mainCtrl', ['$scope','$filter',function($scope, $filter) {
+    $scope.msg = "Test message main";
+  }])
+  .controller('url1Ctrl', ['$scope','$filter',function($scope, $filter) {
+    $scope.msg = "Test message 1";
+  }])
+  .controller('url2Ctrl', ['$scope','$filter',function($scope, $filter) {
+    $scope.msg = "Test message 2";
+  }])
+  .controller('url3Ctrl', ['$scope','$filter',function($scope, $filter) {
+    $scope.msg = "Test message 3";
   }])
   .filter('capitalize', function() {
     return function(input) {
